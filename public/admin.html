@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="admin-page">
+
+    <!-- Dashboard Header -->
+
+    <header class="admin-header">
+
+        <h1>Dashboard</h1>
+
+        <div class="admin-right">
+            <span>Admin</span>
+            <a href="login.html" class="admin-logout">Logout</a>
+        </div>
+
+    </header>
+
+
+    <!-- Main Dashboard -->
+
+    <main class="admin-container">
+
+        <h2>Employee Management System</h2>
+
+
+        <!-- Dashboard Cards -->
+
+        <div class="admin-cards">
+
+            <div class="admin-card employee-card">
+                <h3>Total Employees</h3>
+                <p id="totalEmployees">0</p>
+            </div>
+
+            <div class="admin-card present-card">
+                <h3>Present Today</h3>
+                <p id="presentEmployees">0</p>
+            </div>
+
+            <div class="admin-card absent-card">
+                <h3>Absent Today</h3>
+                <p id="absentEmployees">0</p>
+            </div>
+
+            <div class="admin-card department-card">
+                <h3>Total Departments</h3>
+                <p id="totalDepartments">0</p>
+            </div>
+
+        </div>
+
+
+        <!-- ADD / UPDATE EMPLOYEE -->
+
+        <section class="admin-section">
+
+            <h2 id="formTitle">Add Employee</h2>
+
+            <form id="employeeForm">
+
+                <div class="form-group">
+
+                    <label for="name">Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter employee name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter employee email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="age">Age</label>
+
+                    <input
+                        type="number"
+                        id="age"
+                        placeholder="Enter employee age"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="salary">Salary</label>
+
+                    <input
+                        type="number"
+                        id="salary"
+                        placeholder="Enter employee salary"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="department">Department</label>
+
+                    <select id="department" required>
+
+                        <option value="">
+                            Select Department
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-buttons">
+
+                    <button type="submit" id="submitButton">
+                        Add Employee
+                    </button>
+
+                    <button
+                        type="button"
+                        id="cancelButton"
+                        style="display:none;"
+                    >
+                        Cancel
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- EMPLOYEE LIST -->
+
+        <section class="admin-section">
+
+            <h2>Employee List</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Age</th>
+                            <th>Salary</th>
+                            <th>Department</th>
+                            <th>Actions</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="employeeTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ATTENDANCE SECTION -->
+
+        <section class="admin-section">
+
+            <h2>Today's Attendance</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Employee</th>
+                            <th>Department</th>
+                            <th>Check In</th>
+                            <th>Check Out</th>
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="attendanceTableBody">
+
+                        <tr>
+
+                            <td>Rahul</td>
+                            <td>IT</td>
+                            <td>09:05 AM</td>
+                            <td>06:00 PM</td>
+
+                            <td>
+                                <span class="status-present">
+                                    Present
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>Amit</td>
+                            <td>HR</td>
+                            <td>--</td>
+                            <td>--</td>
+
+                            <td>
+                                <span class="status-absent">
+                                    Absent
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>Priya</td>
+                            <td>Finance</td>
+                            <td>09:15 AM</td>
+                            <td>06:10 PM</td>
+
+                            <td>
+                                <span class="status-present">
+                                    Present
+                                </span>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- SALARY SECTION -->
+
+      <section class="admin-section">
+    <h2>Salary Summary</h2>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Employee</th>
+                    <th>Monthly Salary</th>
+                    <th>Working Days</th>
+                    <th>Present Days</th>
+                    <th>Calculated Salary</th>
+                </tr>
+            </thead>
+
+            <tbody id="salaryTableBody"></tbody>
+        </table>
+    </div>
+</section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

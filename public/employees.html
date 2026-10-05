@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="admin-page">
+
+
+    <!-- HEADER -->
+
+    <header class="admin-header">
+
+        <h1>Employee Dashboard</h1>
+
+        <div class="admin-right">
+
+            <span>Employee</span>
+
+            <a href="login.html" class="admin-logout">
+                Logout
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN DASHBOARD -->
+
+    <main class="admin-container">
+
+
+        <h2>Employee Management System</h2>
+
+
+        <!-- MY INFORMATION -->
+
+        <section class="admin-section">
+
+            <h2>My Information</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Age</th>
+                            <th>Salary</th>
+                            <th>Department</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="myEmployeeTableBody">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- CHECK IN / CHECK OUT -->
+
+        <section class="admin-section">
+
+            <h2>Attendance</h2>
+
+            <div class="check-in-out">
+
+                <button id="checkInButton">
+                    Check In
+                </button>
+
+                <button id="checkOutButton">
+                    Check Out
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ATTENDANCE SUMMARY -->
+
+        <section class="admin-section">
+
+            <h2>My Attendance</h2>
+
+            <div class="admin-cards">
+
+                <div class="admin-card employee-card">
+
+                    <h3>Working Days</h3>
+
+                    <p id="workingDays">26</p>
+
+                </div>
+
+
+                <div class="admin-card present-card">
+
+                    <h3>Present Days</h3>
+
+                    <p id="presentDays">0</p>
+
+                </div>
+
+
+                <div class="admin-card absent-card">
+
+                    <h3>Absent Days</h3>
+
+                    <p id="absentDays">26</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SALARY -->
+
+        <section class="admin-section">
+
+            <h2>My Salary</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Monthly Salary</th>
+                            <th>Working Days</th>
+                            <th>Present Days</th>
+                            <th>Calculated Salary</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td id="monthlySalary">
+                                ₹0
+                            </td>
+
+                            <td id="salaryWorkingDays">
+                                26
+                            </td>
+
+                            <td id="salaryPresentDays">
+                                0
+                            </td>
+
+                            <td id="calculatedSalary">
+                                ₹0
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
